@@ -1,0 +1,27 @@
+{
+  "config": {
+    "target": "https://www.youtube.com/",
+    "phases": [
+      {
+        "duration": 10,
+        "arrivalRate": 1,
+        "rampTo": 10
+      },
+      {
+        "duration": 20,
+        "arrivalRate": 10
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "flow": [
+        {
+          "get": {
+            "url": "/"
+          }
+        }
+      ]
+    }
+  ]
+}
