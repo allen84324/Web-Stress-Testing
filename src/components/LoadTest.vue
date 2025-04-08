@@ -55,10 +55,8 @@ const startTest = async () => {
 	loading.value = true
 	errorMessage.value = ''
 	try {
-		const response = await axios.post(
-			'http://localhost:3000/start-test',
-			config.value
-		)
+		const response = await axios.post('/start-test', config.value)
+
 		results.value = response.data
 	} catch (error) {
 		console.error('壓力測試失敗:', error)

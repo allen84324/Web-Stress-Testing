@@ -9,4 +9,8 @@ export default defineConfig({
 			'/start-test': 'http://localhost:3000', // 將 /start-test 請求代理到伺服器端
 		},
 	},
+	build: {
+		outDir: 'dist', // 📦 打包輸出資料夾
+		emptyOutDir: true,
+	},
 })

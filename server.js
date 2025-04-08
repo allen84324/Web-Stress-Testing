@@ -12,6 +12,14 @@ process.env.PATH = `${path.join(__dirname, 'node_modules', '.bin')}:${
 }`
 
 app.use(cors())
+app.use(express.static(path.join(__dirname, 'dist')))
+app.get('/', (req, res) => {
+	res.sendFile(path.join(__dirname, 'dist', 'index.html'))
+})
+app.get('*', (req, res) => {
+	res.sendFile(path.join(__dirname, 'dist', 'index.html'))
+})
+
 app.use(express.json())
 
 app.post('/start-test', (req, res) => {
